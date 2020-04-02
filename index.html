@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tim Hortons order</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            label {
+                display: inline-block;
+                width: 140px;
+                text-align: right;
+                margin-right: 20px;
+            }​
+            #btn{
+                text-align: center;
+            }
+            .title{
+                font-size:1.5em;
+                color: darkred;
+            }
+            #btnSubmit{
+                margin-left: 40px;
+                margin-right: 20px;
+                font-size: 1.2em;
+                background-color: darkred;
+                color: white;
+                border-radius: 8px;
+            }
+            #btnReset{
+                font-size: 1.2em;
+                background-color: lightskyblue;
+                color: white;
+                border-radius: 8px;
+            }
+            .num {
+                font-size: 1.2em;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <img src="./img/logo-en.jpg" alt="logo">
+        </div>
+        <h1>Order Coffee Online</h1> 
+        <!--use form POST to send data to server side-->
+        <form action="order.php" method="POST" name="form1">
+            <label class="title">Size</label> <br>
+            <label>Small</label><input type="radio" name="size" value="Small" required checked>  <br> 
+            <label>Medium</label><input type="radio" name="size" value="Medium">  <br>
+            <label>Large</label><input type="radio" name="size" value="Large">   <br>
+            <label>Extra Large</label><input type="radio" name="size" value="Extra Large">  <br><br>
+
+            <label class="title">Dairy</label><br>
+            <label>Cream</label><input type="number" name="cream" min="0" max="5" step="1" class="num"> <br>
+
+            <label class="title">Sweeteners</label><br>
+            <label>Sugar</label><input type="number" name="sugar" min="0" max="5" step="1" class="num"> <br><br>
+
+            <input type="submit" value="Order Now" id="btnSubmit">
+            <input type="reset" value="Reset" id="btnReset"><br>
+        </form>
+    </body>
+</html>
